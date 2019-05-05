@@ -2,12 +2,13 @@ import typescript from 'rollup-plugin-typescript2'
 import commonjs from 'rollup-plugin-commonjs'
 import external from 'rollup-plugin-peer-deps-external'
 // import postcss from 'rollup-plugin-postcss-modules'
-import postcss from 'rollup-plugin-postcss'
+// import postcss from 'rollup-plugin-postcss'
 import resolve from 'rollup-plugin-node-resolve'
 import url from 'rollup-plugin-url'
 import svgr from '@svgr/rollup'
-
+import less from 'rollup-plugin-less';
 import pkg from './package.json'
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
 export default {
   input: 'src/index.tsx',
@@ -27,8 +28,12 @@ export default {
   ],
   plugins: [
     external(),
-    postcss({
-      modules: true
+    // postcss({
+    //   modules: true
+    // }),
+    less({
+      insert: true,
+      output: false
     }),
     url(),
     svgr(),
@@ -37,6 +42,7 @@ export default {
       rollupCommonJSResolveHack: true,
       clean: true
     }),
-    commonjs()
+    peerDepsExternal(),
+    commonjs(),
   ]
 }
