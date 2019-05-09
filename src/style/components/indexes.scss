@@ -1,0 +1,49 @@
+@import '../varilables/default.scss';
+@import '../mixin/index.scss';
+
+.#{$prefix}-indexes-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  overflow: auto;
+  background-color: #fff;
+}
+
+.#{$prefix}-indexes {
+  height: 100%;
+  overflow-y: scroll;
+  &-list {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-bottom: 2px;
+  }
+  &-list-header {
+    color: #666;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    padding: rem(40) rem(60);
+  }
+  &-list-item {
+    width: 100%;
+    margin-left: rem(60);
+    padding: rem(40) 0;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+    color: #333;
+  }
+  &-menu {
+    position: absolute;
+    right: rem(40);
+    top: rem(240);
+    width: rem(200);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #999;
+  }
+}

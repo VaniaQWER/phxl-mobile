@@ -1,0 +1,9 @@
+@import '../../varilables/default.scss';
+
+@function rem($px) {
+  @return ($px / $vw_fontsize_base) * 1rem;
+}
+
+@function vw($px) {
+  @return ($px / $vw_base) * 100vw;
+}

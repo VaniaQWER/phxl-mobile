@@ -2,13 +2,14 @@ import typescript from 'rollup-plugin-typescript2'
 import commonjs from 'rollup-plugin-commonjs'
 import external from 'rollup-plugin-peer-deps-external'
 // import postcss from 'rollup-plugin-postcss-modules'
-// import postcss from 'rollup-plugin-postcss'
+import postcss from 'rollup-plugin-postcss'
 import resolve from 'rollup-plugin-node-resolve'
 import url from 'rollup-plugin-url'
 import svgr from '@svgr/rollup'
-import less from 'rollup-plugin-less';
+// import alias from 'rollup-plugin-alias';
 import pkg from './package.json'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import path from 'path';
 
 export default {
   input: 'src/index.tsx',
@@ -28,13 +29,13 @@ export default {
   ],
   plugins: [
     external(),
-    // postcss({
-    //   modules: true
-    // }),
-    less({
-      insert: true,
-      output: false
+    postcss({
+      // modules: true
     }),
+    // alias({
+    //   resolve: ['ts', 'tsx'],
+    //   '@': path.join(__dirname, '.', 'src')
+    // }),
     url(),
     svgr(),
     resolve(),

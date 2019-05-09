@@ -1,0 +1,55 @@
+// $import './color.less';
+// TODO: 主题颜色
+// 命名前缀
+$prefix: phxl;
+
+// 主要颜色
+$primary-color: #1890ff;
+$info-color: #1890ff;
+$success-color: #52c41a;
+$processing-color: #1890ff;
+$error-color: #f5222d;
+$highlight-color: #f5222d;
+$warning-color: #faad14;
+$normal-color: #d9d9d9;
+$white: #fff;
+$black: #000;
+
+// rem 单位换算：定为 75px 只是方便运算，750px-75px、640-64px、1080px-108px，如此类推
+$vw-fontsize-base: 75; // iPhone 6尺寸的根元素大小基准值
+
+$vw_base: 375; //iPhone 6尺寸作为设计稿基准
+
+// Background color for `<body>`
+$body-background: $white;
+
+// Base background color for most componets
+$component-background: $white;
+$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+  'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol';
+$code-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+$text-color: rgba($black, 65%);
+$text-color-secondary: rgba($black, 45%);
+// $text-color-warning: $gold-7;
+// $text-color-danger: $red-7;
+$text-color-inverse: $white;
+$icon-color: inherit;
+$icon-color-hover: rgba($black, 75%);
+$heading-color: rgba(#000, 85%);
+$heading-color-dark: rgba($white, 100%);
+$text-color-dark: rgba($white, 85%);
+$text-color-secondary-dark: rgba($white, 65%);
+$text-selection-bg: $primary-color;
+$font-variant-base: tabular-nums;
+$font-feature-settings-base: 'tnum';
+$font-size-base: 14px;
+$font-size-lg: $font-size-base + 2px;
+$font-size-sm: 12px;
+$heading-1-size: ceil($font-size-base * 2.71);
+$heading-2-size: ceil($font-size-base * 2.14);
+$heading-3-size: ceil($font-size-base * 1.71);
+$heading-4-size: ceil($font-size-base * 1.42);
+$line-height-base: 1.5;
+$border-radius-base: 4px;
+$border-radius-sm: 2px;

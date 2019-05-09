@@ -1,4 +1,3 @@
-import Hello from './components/hello';
-import World from './components/world';
+import Indexes from './components/indexes/index';
 
-export { Hello, World }
+export { Indexes }
